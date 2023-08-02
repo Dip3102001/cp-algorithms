@@ -138,14 +138,14 @@ As soon as we try to go from the current vertex back to the source vertex, we ha
 At this point we can stop the BFS, and start a new BFS from the next vertex.
 From all such cycles (at most one from each BFS) choose the shortest.
 
-* Find all the edges that lie on any shortest path between a given pair of vertices $(a, b)$.
+* Find all the edges that lie on any shortest path in unweighted graph between a given pair of vertices $(a, b)$.
 To do this, run two breadth first searches:
 one from $a$ and one from $b$.
 Let $d_a []$ be the array containing shortest distances obtained from the first BFS (from $a$) and $d_b []$ be the array containing shortest distances obtained from the second BFS from $b$.
 Now for every edge $(u, v)$ it is easy to check whether that edge lies on any shortest path between $a$ and $b$:
 the criterion is the condition $d_a [u] + 1 + d_b [v] = d_a [b]$.
 
-* Find all the vertices on any shortest path between a given pair of vertices $(a, b)$.
+* Find all the vertices on any shortest path in unweighted graph between a given pair of vertices $(a, b)$.
 To accomplish that, run two breadth first searches:
 one from $a$ and one from $b$.
 Let $d_a []$ be the array containing shortest distances obtained from the first BFS (from $a$) and $d_b []$ be the array containing shortest distances obtained from the second BFS (from $b$).
